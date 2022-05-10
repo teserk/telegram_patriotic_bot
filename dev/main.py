@@ -56,6 +56,7 @@ def time_checker():
 
 if __name__ == '__main__':
     # Рассылка
+    schedule.every().day.at("05:21").do(patriotic_message)
     schedule.every().day.at("05:21").do(do_mailing)
     Thread(target=time_checker).start()
 
